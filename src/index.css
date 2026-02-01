@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  /* Definindo as cores da marca para a sua DK 160 */
+  --color-brand-dark: #121212;
+  --color-brand-green: #22C55E;
+  --color-brand-accent: #FACC15;
+}
+
+body {
+  /* Agora o Tailwind já conhece as variáveis acima */
+  @apply bg-brand-dark text-white antialiased;
+}
