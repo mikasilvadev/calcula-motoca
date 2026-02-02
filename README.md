@@ -1,73 +1,58 @@
-# React + TypeScript + Vite
+# Projeto CalculaMotoca
+Controlador financeiro para pessoas autônomas. Planeje suas metas, registre ganhos e gastos com rapidez.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Visão Geral
+O **CalculaMotoca** é um aplicativo para pessoas que precisam de uma ferramenta ágil para controle financeiro. Diferente de apps de contabilidade complexos, aqui o foco é:
+* **Ações claras**
+* **Lançamentos Rápidos**
+* **Feedback visual**
 
-Currently, two official plugins are available:
+## Stack
+O projeto utiliza uma arquitetura moderna, separada entre um Front-end ágil e um Back-end escalável:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+| Camada | Tecnologia | Função |
+| :---    | :--- | :--- |
+| **Front-end** | **React + TypeScript** | Interface reativa e segura com tipos. |
+| **Estilização** | **Tailwind CSS (v4)** | Design moderno e utilitário. |
+| **Back-end** | **ASP.NET Core Web API** | Servidor robusto em C#. |
+| **Banco Online** | **MySQL** | Sincronização em nuvem para multi-dispositivo. |
+| **Banco Local** | **SQLite (IndexedDB)** | Persistência offline-first. |
+| **Autenticação** | **JWT** | Segurança padrão de mercado por tokens. |
 
-## React Compiler
+## Principais Funcionalidades
+* **🎯 Gestão de Metas:** Defina um valor alvo e receba o cálculo de quanto precisa ganhar por dia trabalhado.
+* **⚡ Lançamento Rápido:** Fechamento do dia com botões de atalho para gastos frequentes (gasolina, lanche, manutenção).
+* **💰 Contas e Caixinhas:** Separe o dinheiro do banco, da carteira e das reservas.
+* **📊 Dashboard Motivacional:** Progresso da meta em tempo real e projeções financeiras.
+* **📡 Offline-First:** O app funciona perfeitamente sem internet, sincronizando os dados quando a conexão retorna.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛣️ Roadmap de Desenvolvimento
+O projeto está dividido em duas grandes etapas:
 
-## Expanding the ESLint configuration
+### 1. MVP (Em progresso 🏗️)
+- [x] Setup do ambiente (React, TS, Tailwind v4).
+- [x] Design System básico (Buttons, Cards, Inputs).
+- [ ] Lógica de Metas e Calendário de trabalho.
+- [ ] Persistência local (SQLite/IndexedDB).
+- [ ] Exportação/Importação via JSON.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 2. V1 (Futuro 🚀)
+- [ ] API C# com Autenticação JWT.
+- [ ] Banco de dados MySQL na nuvem.
+- [ ] Sincronização automática (Push/Pull).
+- [ ] Instalação como PWA no celular.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 💻 Como rodar o projeto localmente
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+```bash
+# Clone o repositório
+git clone [https://github.com/mikasilvadev/calcula-motoca.git](https://github.com/mikasilvadev/calcula-motoca.git)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# Entre na pasta
+cd calcula-motoca
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# Instale as dependências
+npm install
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# Rode o servidor de desenvolvimento
+npm run dev
