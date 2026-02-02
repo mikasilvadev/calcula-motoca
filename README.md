@@ -20,29 +20,29 @@ O projeto utiliza uma arquitetura moderna, separada entre um Front-end ágil e u
 | **Autenticação** | **JWT** | Segurança padrão de mercado por tokens. |
 
 ## Principais Funcionalidades
-* **🎯 Gestão de Metas:** Defina um valor alvo e receba o cálculo de quanto precisa ganhar por dia trabalhado.
-* **⚡ Lançamento Rápido:** Fechamento do dia com botões de atalho para gastos frequentes (gasolina, lanche, manutenção).
-* **💰 Contas e Caixinhas:** Separe o dinheiro do banco, da carteira e das reservas.
-* **📊 Dashboard Motivacional:** Progresso da meta em tempo real e projeções financeiras.
-* **📡 Offline-First:** O app funciona perfeitamente sem internet, sincronizando os dados quando a conexão retorna.
+* ** Gestão de Metas:** Defina um valor alvo e receba o cálculo de quanto precisa ganhar por dia trabalhado.
+* ** Lançamento Rápido:** Fechamento do dia com botões de atalho para gastos frequentes (gasolina, lanche, manutenção).
+* ** Contas e Caixinhas:** Separe o dinheiro do banco, da carteira e das reservas.
+* ** Dashboard Motivacional:** Progresso da meta em tempo real e projeções financeiras.
+* ** Offline-First:** O app funciona perfeitamente sem internet, sincronizando os dados quando a conexão retorna.
 
-## 🛣️ Roadmap de Desenvolvimento
+## Roadmap de Desenvolvimento
 O projeto está dividido em duas grandes etapas:
 
-### 1. MVP (Em progresso 🏗️)
+### 1. MVP (Em progresso )
 - [x] Setup do ambiente (React, TS, Tailwind v4).
 - [x] Design System básico (Buttons, Cards, Inputs).
 - [ ] Lógica de Metas e Calendário de trabalho.
 - [ ] Persistência local (SQLite/IndexedDB).
 - [ ] Exportação/Importação via JSON.
 
-### 2. V1 (Futuro 🚀)
+### 2. V1 (Futuro)
 - [ ] API C# com Autenticação JWT.
 - [ ] Banco de dados MySQL na nuvem.
 - [ ] Sincronização automática (Push/Pull).
 - [ ] Instalação como PWA no celular.
 
-## 💻 Como rodar o projeto localmente
+## Como rodar o projeto localmente
 
 ```bash
 # Clone o repositório
